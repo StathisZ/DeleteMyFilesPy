@@ -1,7 +1,14 @@
 import os
 import sys
+while True:
+    folderPath = input("Paste or type the folder path: ")
+    if "/" not in folderPath:
+        print("This is not a folder path! Try again, or type quit.")
+        if "quit" in folderPath.lower():
+            sys.exit(0)
+    else:
+        break
 
-folderPath = input("Paste or type the folder path: ")
 fileExtension = input("Type the file extension you want to remove (i.e .txt): ")
 
 filelist = os.listdir(folderPath)
